@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fontawsome kit link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Blog Section-->
+    <section class="blog flex-row">
+<div class=" grid grid-cols-2  place-content-between">
+        <div class="blog-sec p-4 mx-6">
+       
+        <h1 class="heading-text">Interactive</h1>
+        <h4  class="heading-sub-text">Geometry Genius</h4>
+    </div>
+
+
+    <div class="blog-btn  ">
+
+       <a href="blog.html "  target="blank"><button class="rounded-md bg-sky-600 text-white btn-size">
+            Blog   
+        </button></a> 
+    </div>
+
+</div>
+    </section>
+
+
+
+    <!-- Cart Section -->
+
+<section class="cart-section ">
+
+<!-- grid grid-rows-2 grid-flow-col gap-4 -->
+    <div class="grid grid-cols-4 gap-4" >
+
+    <!-- 1. Triangle -->
+<div  id="random-color" class="random-color triangle-cart   flex flex-col">
+    <div class="triangle-img mx-auto"><img src="images/triangle.png" alt=""></div>
+
+    <h3 class="triangle-text mx-auto font-bold flex justify-center text-color-1">Triangle</h3>
+
+    <h4 class="flex justify-center">Area(A) = 0.5 x b x h</h4>
+    
+<div class="input-fields flex justify-center mt-5">
+    <input id="triangle-b" type="number" placeholder="b" class="input-size ml-4 mr-4">
+    <h5>cm </h5>
+
+    <input id="triangle-h" type="number" placeholder="h" class="input-size ml-4 mr-4">
+    <h5>cm </h5>
+</div>
+<br>
+<div class="flex justify-center">
+    <button id="triangle-btn" class="cal-btn mx-auto rounded-md bg-sky-600 text-white ">Calculate</button>
+</div>
+</div>
+
+
+
+     <!-- 2. Ractangle -->
+
+     <div class="triangle-cart   flex flex-col">
+        <div class="triangle-img mx-auto"><img src="images/rectangle.png" alt=""></div>
+    
+        <h3 class="triangle-text mx-auto font-bold text-center text-color-1">Ractangle</h3>
+    
+        <h4 class="text-center">Area(A) = w x l</h4>
+        
+    <div class="input-fields flex justify-center mt-5">
+        <input id="ractangle-w" type="number" placeholder="w" class="input-size ml-4 mr-4">
+        <h5>cm </h5>
+    
+        <input id="ractangle-l" type="number" placeholder="l" class="input-size ml-4 mr-4">
+        <h5>cm </h5>
+    </div>
+    <br>
+    <div class="flex justify-center">
+        <button id="ractangle-btn" class="cal-btn mx-auto rounded-md bg-sky-600 text-white ">Calculate</button>
+    </div>
+    </div>
+
+
+      <!-- 3. Parallelogram -->
+
+      <div class="triangle-cart    flex flex-col">
+        <div class="triangle-img mx-auto"><img src="images/parallelogram.png" alt=""></div>
+    
+        <h3 class="triangle-text mx-auto font-bold text-center  text-color-1">Parallelogram</h3>
+    
+        <h4 class="text-center ">Area(A) = b x h</h4>
+        
+    <div class=" text-center mt-5"> 
+
+        <h5>b=10cm, h=12cm </h5>
+
+    </div>
+    <br>
+    <div class="flex justify-center">
+        <button id="parallelogram-btn" class="cal-btn mx-auto rounded-md bg-sky-600 text-white ">Calculate</button>
+    </div>
+    </div>
+
+
+
+    <!-- Output cart -->
+    <div class="triangle-cart    flex flex-col">
+        <div>
+            
+            
+            <h2 class="text-center"><b><u>Area calculation</u></b></h2>
+           <div>
+
+
+            <!-- triagngle value -->
+
+            <div id="triangle-output-text" class="grid grid-cols-3 mt-3"> 
+               <div><p>Triangle </p> </div>
+                <div><span id="triangle-value"></span> cm<sup>2</sup>  </div>
+                <div> <button id="tri-convert-button" class="convert-button rounded-md mx-auto" >Convert to m <sup>2</sup> </button></div>
+            </div>
+
+
+<!-- ractangle value -->
+            <div id="ractagle-output-text" class="grid grid-cols-3  mt-3">
+<div><p>Ractangle </p></div>
+  <div>  <span id="ractangle-value"></span> cm<sup>2</sup> </div>
+  <div> <button id="convert-button" class="convert-button rounded-md mx-auto" >Convert to m <sup>2</sup> </button></div>
+</div> 
+            
+
+
+            <!-- parallelogram value -->
+            <div id="parallelogram-output-text" class="grid grid-cols-3 mt-3">
+                <div><p>Parallelogram</p> </div>
+               <div><p> <span id="parallelogram-value"></span> cm<sup>2</sup> </p></div>
+               <div> <button id="convert-button" class="convert-button rounded-md mx-auto" >Convert to m <sup>2</sup> </button></div>
+                </div>
+
+            
+            <!-- rhombus value -->
+            <div id="rhombus-output-text" class="grid grid-cols-3 mt-3">
+                <div><p>Rhombus</p></div>
+                <div><p><span id="rhombus-value"></span> cm<sup>2</sup> </p></div>
+                <div> <button id="convert-button" class="convert-button rounded-md mx-auto" >Convert to m <sup>2</sup> </button></div>
+            </div>
+            
+            
+            <!-- pentagon value -->
+            <div id="pentagon-output-text" class="grid grid-cols-3 mt-3"> 
+                <div><p>Pentagon</p></div> 
+                <div><p><span id="pentagon-value"></span> cm<sup>2</sup></p></div> 
+                <div> <button id="convert-button" class="convert-button rounded-md mx-auto" >Convert to m <sup>2</sup> </button></div>
+            </div>
+            
+            
+            <!-- ellipse value -->
+            <div id="ellipse-output-text" class="grid grid-cols-3 mt-3">
+                 <div><p>Ellipse </p></div>
+                 <div><p><span id="ellipse-value"></span> cm<sup>2</sup> </p></div>
+                 <div> <button id="convert-button" class="convert-button rounded-md mx-auto" >Convert to m <sup>2</sup> </button></div>
+            </div>
+
+
+           </div>
+            
+            
+        </div>   
+    
+    
+    </div>
+
+
+
+
+
+       <!-- 4. Rhomobus -->
+
+       <div class="triangle-cart    flex flex-col">
+        <div class="triangle-img mx-auto"><img src="images/rhombus.png" alt=""></div>
+    
+        <h3 class="triangle-text mx-auto font-bold text-center text-color-1">Rhombus</h3>
+    
+        <h4 class="text-center">Area(A) = 0.5 x d<sub>1</sub> x d<sub>2</sub> </h4>
+        
+        
+    <div class=" text-center mt-5"> 
+
+        <h5>d<sub>1</sub>= 16cm   d<sub>2</sub> = 8cm </h5>
+
+    </div>
+
+    <br>
+    <div class="flex justify-center">
+        <button id="rhombus-btn" class="cal-btn mx-auto rounded-md bg-sky-600 text-white ">Calculate</button>
+    </div>
+    </div>
+
+
+        <!-- 5. Pentagon --> 
+        <div class="triangle-cart   flex flex-col">
+            <div class="triangle-img mx-auto"><img src="images/pentagon.png" alt=""></div>
+        
+            <h3 class="triangle-text mx-auto font-bold flex justify-center text-color-1">Pentagon</h3>
+        
+            <h4 class="text-center">Area(A) = 0.5 x p x b </h4>
+            
+            
+        
+            <div class=" text-center mt-5"> 
+        
+                <h5>p = 6cm   b = 10cm </h5>
+        
+            </div>
+        <br>
+        <div class="flex justify-center">
+            <button id="pentagon-btn" class="cal-btn mx-auto rounded-md bg-sky-600 text-white ">Calculate</button>
+        </div>
+        </div>
+
+
+         <!-- 6. Ellipse -->
+         <div class="triangle-cart   flex flex-col">
+            <div class="triangle-img mx-auto"><img src="images/ellipse.png" alt=""></div>
+        
+            <h3 class="triangle-text mx-auto font-bold flex justify-center text-color-1">Ellipse</h3>
+        
+            <h4 class="flex justify-center">Area(A) = <img src="images/pi.png" class="pi-img" alt=""> ab </h4>
+            
+            <div class=" text-center mt-5"> 
+        
+                <h5>a = 10cm ,  b = 4cm </h5>
+        
+            </div>
+        <br>
+        <div class="flex justify-center">
+            <button id="ellipse-btn" class="cal-btn mx-auto rounded-md bg-sky-600 text-white ">Calculate</button>
+        </div>
+        </div>
+
+
+
+    </div>
+        </section>
+
+
+
+
+
+<script src="JS/Calculation.js"></script>
+
+</body>
+</html>
